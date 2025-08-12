@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animation - Basic Learning</title>
     <style type="text/css">
-        
+
         @keyframes colorChange { /* For animation keyframe keyword is use */
             /* 5 kaam karega (define krdiye 5 kaam) */
             0% {
@@ -40,8 +40,8 @@
         } 
 
         .main {
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
             background-color: red;
             /* animation-name: colorChange;
             animation-duration: 5s;
@@ -55,11 +55,91 @@
             animation: colorChange 5s 0s infinite linear;
             position: relative;
         }
+
+        @keyframes truckLeftToRight {
+            0% {
+                right: -800px;
+            }
+            100% {
+                right: 120%;
+            }
+        }
+
+        @keyframes wheelRotator {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .truck {
+            /* margin-top: 220px; */
+            position: fixed;
+            bottom: 0px;
+            right: -800px;
+            animation: truckLeftToRight 8s 0s infinite linear;
+        }
+
+        .truck img {
+            animation: wheelRotator 6s 0s infinite linear;
+        }
+
+        button {
+            display: table;
+            margin: 40px auto;
+            background: white;
+            padding: 15px 25px;
+            font-size: 30px;
+            border-radius: 15px;
+            border: 1px solid brown;
+            position: relative;
+        }
+
+        @keyframes waveEffect {
+            0% {
+                transform: scale(1,1);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.5,1.5);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(1,1);
+                opacity: 0;
+            }
+        }
+
+        .wave {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: brown;
+            border-radius: 15px;
+            opacity: 0px;
+            animation: waveEffect 3s 0s infinite linear;
+        }
     </style>
 </head>
 <body>
+    <button>Enquire Now
+        <div class="wave">
+
+        </div>
+    </button>
     <div class="main">
         
     </div>
+
+    <div class="truck">
+        <img src="imgs/truck2.png" alt="">
+    </div>
+
+
+    <script src="/app.js"></script>
 </body>
 </html>
