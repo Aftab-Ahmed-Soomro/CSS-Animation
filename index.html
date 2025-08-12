@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation - Basic Learning</title>
+    <style type="text/css">
+        
+        @keyframes colorChange { /* For animation keyframe keyword is use */
+            /* 5 kaam karega (define krdiye 5 kaam) */
+            0% {
+                background-color: red; /* pehla kaam */
+                left: 0px; /* dusra kaam */
+                top: 0px;
+            }
+            
+            25% {
+                background-color: pink;
+                left: 300px;
+                top: 0px;
+            }
+            
+            50% {
+                background-color: yellow;
+                left: 300px;
+                top: 300px;
+            }
+            
+            75% {
+                background-color: blue;
+                left: 0px;
+                top: 300px;
+            }
+            
+            100% {
+                background-color: green;
+                left: 0px;
+                top: 0px;
+            }
+        } 
+
+        .main {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            /* animation-name: colorChange;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-iteration-count: 3;
+            animation-timing-function: linear; */
+            /* linear - same speed from start to end */
+            /* ease in - slow start */
+            /* ease out - slow end */
+            /* ease-in-out - slow start and slow end */
+            animation: colorChange 5s 0s infinite linear;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        
+    </div>
+</body>
+</html>
